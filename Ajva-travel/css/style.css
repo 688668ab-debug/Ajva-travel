@@ -1,0 +1,1205 @@
+/* =========================
+   AJVA TRAVEL
+   UMRAH & HAJJ
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(8, 15, 11, 0.96);
+
+    border-bottom: 1px solid rgba(201, 163, 74, 0.3);
+
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo img {
+    width: 90px;
+    height: 80px;
+
+    object-fit: contain;
+
+    filter: brightness(1.15);
+
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.3);
+}
+
+
+/* MENU */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    position: relative;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #d5b45c;
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #c9a34a;
+
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* HEADER BUTTON */
+
+.header-button {
+    padding: 12px 22px;
+
+    border: 1px solid #c9a34a;
+
+    border-radius: 30px;
+
+    color: #d5b45c;
+
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background: #c9a34a;
+
+    color: #111;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 780px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 15, 10, 0.95),
+            rgba(5, 15, 10, 0.70),
+            rgba(5, 15, 10, 0.35)
+        ),
+        url("../images/hero.jpg") center / cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 100px;
+
+    color: #fff;
+
+    animation: fadeUp 1s ease;
+}
+
+.hero-subtitle {
+    color: #d5b45c;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 750px;
+
+    font-size: clamp(50px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    color: #ddd;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #c9a34a;
+
+    color: #111;
+}
+
+.btn-primary:hover {
+    background: #e0c06d;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(201, 163, 74, 0.3);
+}
+
+.btn-outline {
+    border: 1px solid #c9a34a;
+
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: #c9a34a;
+
+    color: #111;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 100px 0;
+
+    background: #fff;
+}
+
+.intro-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.section-label {
+    color: #a88432;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    color: #173d2b;
+
+    font-size: 45px;
+
+    line-height: 1.2;
+}
+
+.intro p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-header p {
+    color: #a88432;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    color: #173d2b;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.section-header span {
+    color: #777;
+}
+
+
+/* =========================
+   PILGRIMAGE
+========================= */
+
+.pilgrimage {
+    padding: 110px 0;
+}
+
+.pilgrimage-light {
+    background: #f8f7f2;
+}
+
+.pilgrimage-dark {
+    background: #101b15;
+
+    color: #fff;
+}
+
+.pilgrimage-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.pilgrimage-image {
+    height: 520px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.pilgrimage-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.pilgrimage-image:hover img {
+    transform: scale(1.05);
+}
+
+.pilgrimage-info h2 {
+    color: #173d2b;
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+}
+
+.pilgrimage-dark .pilgrimage-info h2 {
+    color: #d5b45c;
+}
+
+.pilgrimage-info > p {
+    color: #666;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.pilgrimage-dark .pilgrimage-info > p {
+    color: #ccc;
+}
+
+
+/* FEATURES */
+
+.features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+}
+
+.feature > span {
+    font-size: 28px;
+
+    min-width: 40px;
+}
+
+.feature h3 {
+    color: #173d2b;
+
+    margin-bottom: 5px;
+}
+
+.pilgrimage-dark .feature h3 {
+    color: #d5b45c;
+}
+
+.feature p {
+    color: #777;
+
+    line-height: 1.5;
+}
+
+.pilgrimage-dark .feature p {
+    color: #aaa;
+}
+
+
+/* =========================
+   PACKAGES
+========================= */
+
+.packages {
+    padding: 110px 0;
+
+    background: #fff;
+}
+
+.package-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.package-card {
+    padding: 40px 30px;
+
+    background: #faf9f5;
+
+    border: 1px solid #e5e1d5;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.package-featured {
+    background: #173d2b;
+
+    border-color: #c9a34a;
+}
+
+.package-icon {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.package-type {
+    color: #a88432;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.package-card h3 {
+    color: #173d2b;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.package-featured h3 {
+    color: #fff;
+}
+
+.package-card > p:not(.package-type) {
+    color: #777;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.package-featured > p:not(.package-type) {
+    color: #ccc;
+}
+
+.package-card a {
+    color: #a88432;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   ADVANTAGES
+========================= */
+
+.advantages {
+    padding: 110px 0;
+
+    background: #0c130f;
+}
+
+.advantages .section-header h2 {
+    color: #fff;
+}
+
+.advantages-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.advantage {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(201, 163, 74, 0.25);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.advantage:hover {
+    transform: translateY(-8px);
+
+    border-color: #c9a34a;
+
+    background: rgba(201, 163, 74, 0.05);
+}
+
+.advantage-icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.advantage h3 {
+    color: #d5b45c;
+
+    margin-bottom: 12px;
+}
+
+.advantage p {
+    color: #aaa;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 110px 0;
+
+    background: #fff;
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    height: 500px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text h2 {
+    color: #173d2b;
+
+    font-size: 50px;
+
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    padding: 110px 0;
+
+    background: #f8f7f2;
+}
+
+.faq-list {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.faq details {
+    background: #fff;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e1d5;
+}
+
+.faq summary {
+    padding: 22px 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: #173d2b;
+
+    list-style: none;
+}
+
+.faq summary::after {
+    content: "+";
+
+    float: right;
+
+    color: #a88432;
+
+    font-size: 22px;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details p {
+    padding: 0 25px 22px;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 110px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #173d2b,
+            #0b1c12
+        );
+
+    color: #fff;
+}
+
+.contact-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #ccc;
+
+    line-height: 1.7;
+}
+
+.contact-form {
+    padding: 35px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #c9a34a;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 30px;
+
+    background: #c9a34a;
+
+    color: #111;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #173d2b;
+
+    color: #fff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding-top: 60px;
+
+    background: #080b09;
+
+    color: #fff;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+.footer .logo img {
+    width: 100px;
+
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: #999;
+
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: #d5b45c;
+
+    margin-bottom: 18px;
+}
+
+.footer a:not(.logo) {
+    display: block;
+
+    color: #999;
+
+    margin-bottom: 10px;
+
+    transition: 0.3s;
+}
+
+.footer a:not(.logo):hover {
+    color: #d5b45c;
+}
+
+.footer-bottom {
+    padding: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        gap: 15px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .intro-content,
+    .pilgrimage-content,
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .pilgrimage-dark .pilgrimage-content {
+        display: flex;
+
+        flex-direction: column-reverse;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    /* HEADER */
+    .header-content {
+        min-height: 70px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .header-button {
+        display: block;
+        padding: 9px 15px;
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 650px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+    /* SECTIONS */
+    .intro,
+    .pilgrimage,
+    .packages,
+    .advantages,
+    .about,
+    .faq,
+    .contact {
+        padding: 70px 0;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+
+    /* UMRAH / HAJJ */
+    .pilgrimage-content {
+        gap: 35px;
+    }
+
+    .pilgrimage-image {
+        height: 300px;
+        border-radius: 15px;
+    }
+
+    .pilgrimage-info h2 {
+        font-size: 42px;
+    }
+
+    .pilgrimage-info > p {
+        font-size: 16px;
+    }
+
+    .feature {
+        gap: 10px;
+    }
+
+    .feature > span {
+        font-size: 24px;
+        min-width: 35px;
+    }
+
+
+    /* PACKAGES */
+    .package-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .package-card {
+        padding: 30px 20px;
+    }
+
+
+    /* ADVANTAGES */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .advantage {
+        padding: 30px 20px;
+    }
+
+
+    /* ABOUT */
+    .about-content {
+        gap: 35px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 38px;
+    }
+
+
+    /* FAQ */
+    .faq summary {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .faq details p {
+        padding: 0 18px 18px;
+    }
+
+
+    /* CONTACT */
+    .contact-content {
+        gap: 35px;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+
+    /* FOOTER */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer .logo img {
+        margin: 0 auto 15px;
+    }
+}
+.ajva{
+    width: 70px;
+    height: 60px;
+
+    object-fit: contain;
+
+    filter: brightness(1.15);
+
+    transition: 0.3s;
+    border-radius: 40px;
+}
